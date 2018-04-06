@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const northListing = [
     {   name:BMPG 1
         sex: "Boys",
@@ -232,3 +233,13 @@ nearbyCollege: "SRCC, Kirori Mal College, Ramjas College, Hindu College, SGTB Kh
         thumbnail: "https://lh6.googleusercontent.com/-SUFzj-Z7_P4/AAAAAAAAAAI/AAAAAAAAABQ/F6WRgAztFDA/photo.jpg",
     },
 ];
+=======
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var data = [];
+
+exports.default = data;
+>>>>>>> 059f516bf2efa5a18a8cfb40cf350ae2cbc75af7
