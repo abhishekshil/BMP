@@ -13,8 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Flat Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 <!-- for banner css files -->
 <link rel="stylesheet" type="text/css" href="css/zoomslider.css" /><!--zoomslider css -->
@@ -28,6 +27,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- custom-theme css files -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/prettySticky.css" type="text/css">
 <!-- //custom-theme css files-->
 
 <!-- font-awesome-icons -->
@@ -42,97 +42,144 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
 </head>
 <body>
 
 <!--/main-header-->
-<div id="demo-1" data-zs-src='["http://res.cloudinary.com/abhishekshil97/image/upload/v1522180756/sc1/IMG-20180321-WA0033.jpg", "http://res.cloudinary.com/abhishekshil97/image/upload/v1522180756/sc1/IMG-20180321-WA0035.jpg", "","images/b4.jpg"]' data-zs-overlay="dots">
+<div id="demo-1" data-zs-src='["images/b1.jpg", "images/b2.jpg", "images/b3.jpg","images/b4.jpg"]' data-zs-overlay="dots">
 	<div class="demo-inner-content">
-
-	<!--/banner-info-->
-	   <div class="header">
-			   <div class="header-main">
-				 <div class="container">
-				<nav class="navbar navbar-default">
-						<div class="navbar-header header-logo">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<!--div  id="home" class="banner">
+		<div class="banner-info"-->
+			<!--navigation-->
+			<div class="top-nav">
+				<nav>
+					<div class="container">
+						<div class="navbar-header logo">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							</button>
-							<h1 ><img href="index.html" src="" alt="logo"></img</h1>
+							<h1><a href="index.html">Rental</a></h1>
 						</div>
-						<!-- navbar-header -->
+						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-right">
-									<li><a class="scroll hvr-outline-in" href="index.html">Home</a></li>
-									<li><a class="scroll hvr-outline-in" href="#about">About</a></li>
-									<li><a class="scroll hvr-outline-in" href="#services">Facilities</a></li>
-									<li class="dropdown menu__item">
-										<a href="#" class="dropdown-toggle menu__link hvr-outline-in"  data-toggle="dropdown" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">Location<span class="caret"></span></a>
+							<ul class="nav navbar-right">
+								<li><a href="#index.html" class="link-kumya active scroll"><span data-letters="Home">Home</span></a></li>
+								<li><a href="#about" class="link-kumya"><span data-letters="About Us">About Us</span></a></li>
+								<li><a href="#services" class="link-kumya"><span data-letters="Facilities">Facilities</span></a></li>
+								<li class="dropdown menu__item">
+										<a href="#" class="dropdown-toggle menu__link link-kumya"  data-toggle="Location" data-hover="Pages" role="button" aria-haspopup="true" aria-expanded="false">Location<span class="caret"></span></a>
 										<ul class="dropdown-menu">
-									<li><a class="scroll hvr-outline-in" href="north.html">North Campus</a></li>
-									<li><a class="scroll hvr-outline-in" href="south.html">South Campus</a></li>
-                  <li><a class="scroll hvr-outline-in" href="noida.html">Noida</a></li>
+									<li><a class="link-kumya" href="north.html"><span data-letters="North Campus">North Campus</a></li>
+									<li><a class="link-kumya" href="south.html"><span data-letters="South Campus">South Campus</a></li>
+                  <li><a class="link-kumya" href="noida.html"><span data-letters="Noida">Noida</a></li>
 										</ul>
 									</li>
-									<li><a class="scroll hvr-outline-in" href="#customer">Testimonials</a></li>
-									<li><a class="scroll hvr-outline-in" href="#contact">Contact</a></li>
-							  </ul>
+								<li><a href="#portfolio" class="link-kumya"><span data-letters="Testimonials">Testimonials</span></a></li>
+								<li><a href="#contact" class="link-kumya"><span data-letters="Contact">Contact</span></a></li>
+							</ul>
+							<div class="clearfix"> </div>
 						</div>
-						<div class="clearfix"> </div>
-					</nav>
-				 <div class="clearfix"> </div>
-			   </div>
-			   </div>
-		</div>
-		<div class="w3-banner-head-info center">
-				<div class="container center">
-				   <div class="banner-text">
-						<!--h1 class="center header-logo">Book My PG</h1-->
-						<h2 class="center glyphicons-halflings-regular">"Your Need ,Our Priority"</h2>
-						<form class="field" id="searchform">
-						  <input type="text" id="searchterm" placeholder="what are you searching for?" />
-						  <button type="button" onclick="searchPG()" id="search">Find!</button>
-						</form>
+					</div>
+				</nav>
+			</div>
+			<div class="w3-banner-head-info">
+			<div class="container">
+				 <div class="banner-text">
+					<h2>owing a home is a keystone of wealth</h2>
 
+						<div class="book-form ">
+							<form class="field" id="searchform">
+						 <input type="text" id="searchterm" placeholder="what are you searching for?" />
+						 <button type="button" onclick="searchPG()" id="search">Find!</button>
+											 </form>
 
-						<!--div class="book-form ">
-						   <form action="#" method="post">
-								<div class="col-md-3 form-time-w3layouts">
-										<label><i class="fa fa-building" aria-hidden="true"></i> College</label>
-										<input type="text" placeholder="Name" required="">
-								</div>
-								<div class="col-md-3 form-date-w3-agileits">
-										<label><i class="fa fa-map-marker" aria-hidden="true"></i> Location</label>
-										<select class="form-control">
-											<option>North Campus</option>
-											<option>South campus</option>
-											<option>Noida</option>
-
-										</select>
-								</div>
-								<div class="col-md-3 form-left-agileits-w3layouts ">
-										<label><i class="fa fa-home" aria-hidden="true"></i> Category</label>
-										<select class="form-control">
-											<option>Boys</option>
-											<option>Girls</option>
-
-										</select>
-								</div>
-								<div class="col-md-3 form-left-agileits-submit">
-									  <input type="submit" value="Search PG">
-								</div>
-								<div class="clearfix"></div>
-							</form>
-						</div-->
 					</div>
 				</div>
-		</div>
-			<!--/banner-info-->
+			</div>
 	</div>
+		<!--/banner-info-->
 </div>
+</div>
+			<!--//navigation-->
+			<!--div class="banner-text"-->
+				<!--banner Slider starts Here-->
+				<script src="js/responsiveslides.min.js"></script>
+				<script>
+					// You can also use "$(window).load(function() {"
+					$(function () {
+					  // Slideshow 3
+					  $("#slider3").responsiveSlides({
+						auto: true,
+						pager: true,
+						nav: false,
+						speed: 500,
+						namespace: "callbacks",
+						before: function () {
+						  $('.events').append("<li>before event fired.</li>");
+						},
+						after: function () {
+						  $('.events').append("<li>after event fired.</li>");
+						}
+					  });
+
+					});
+				</script>
+				<!--//End-slider-script-->
+				<!--div  id="top" class="callbacks_container">
+					<ul class="rslides" id="slider3">
+						<li>
+							<div class="banner-text-info">
+								<h2>WE'LL HELP YOU FIND YOUR DREAM HOME</h2>
+								<h3>Lorem Ipsum was popularised In sit amet sapien eros Integer dolore magna aliqua Temporibus autem quibusdam</h3>
+								<div class="more">
+									<a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="banner-text-info">
+								<h2>QUISQUE ORNARE FEUGIAT ERAT SAPIEN</h2>
+								<h3>In sit amet sapien eros Integer dolore magna aliqua Temporibus lorem lpsum was popularised autem quibusdam</h3>
+								<div class="more">
+									<a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="banner-text-info">
+								<h2>FUSCE PORTTITOR MASSA TURPISGRADA</h2>
+								<h3>Temporibus autem quibusdam Lorem Ipsum was popularised In sit amet sapien eros Integer dolore magna aliqua </h3>
+								<div class="more">
+									<a href="single.html" class="button-pipaluk button--inverted"> Read More</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div-->
+<script>
+function openNav() {
+    document.getElementById("bs-example-navbar-collapse-1").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("bs-example-navbar-collapse-1").style.height = "0%";
+}
+</script>
 <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
  <!--/banner-section-->
 
@@ -964,6 +1011,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							});
 					</script>
 <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+<script src="js/prettySticky.js"></script>
 <!-- testimonilas slider -->
 
 </body>

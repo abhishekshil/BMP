@@ -7,7 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 @import url(http://fonts.googleapis.com/css?family=Montserrat+Alternates);
 html, body{
     font-size: 100%;
-	background:rgba(0, 0, 0, 0.1);
+  background-image: url("images/Background.jpg");
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -42,7 +42,7 @@ img{
 /*--header--*/
 .header-main {
     background: rgba(0, 0, 0, 0);
-    /*background: #009688;*/
+    background: #745EC5;
     pos
     padding: 10px 0;
 }
@@ -80,12 +80,12 @@ img{
 .field>input[type=text] {
   flex:1;
   padding:0.6em;
-  border:0.2em solid #009688;
+  border:0.2em solid #745EC5;
 }
 
 .field>button {
   padding:0.6em 0.8em;
-  background-color:#009688;
+  background-color:#745EC5;
   color:white;
   border:none;
 }
@@ -110,7 +110,142 @@ img{
     min-height: 780px;
 }
 /*-- Navbar --*/
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+.top-nav {
+	z-index: 999;
+}
+nav.navbar.navbar-default {
+    background-color: inherit;
+    border: none;
+    margin: 0;
+}
+.top-nav ul li {
+    margin: 0 0.5em;
+    display: inline-block;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .top-nav ul li  a.active:before {
+    color: #5BD982;
+}
+/* Effect 11: text fill based on Lea Verou's animation http://dabblet.com/gist/6046779 */
+.top-nav ul li a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+	color:#fff;
+	font-family: 'Abel-Regular';
+	position:relative;
+}
+.top-nav ul li a.link-kumya.active {
+    background: #745EC5;
+}
+.nav > li > a:hover, .nav > li > a:focus,.top-nav ul li a.active{
+    background: none;
+}
+/*--drop-down--*/
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background-color: #745EC5;
+    border: none;
+}
+ul.dropdown-menu li a {
+    color: #745EC5;
+	font-size: 1.1em;
+}
+ul.nav.navbar-right {
+    margin-top: .3em;
+}
+.navbar-right .dropdown-menu {
+    left: 0;
+    right: auto;
+    margin-top: 10px;
+    min-width: 100%;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: #745EC5;
+}
+/*--//drop-down--*/
+/*--Kumya--*/
+.link-kumya {
+	overflow: hidden;
+}
+.link-kumya:hover {
+	color: #000;
+}
+.link-kumya::after {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	right: -2px;
+	z-index: 1;
+	background: #745EC5;
+	-webkit-transform: translate3d(101%,0,0);
+	transform: translate3d(101%,0,0);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.link-kumya:hover::after {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+.link-kumya span {
+	position: relative;
+	z-index: 9999;
+}
+.link-kumya span::before {
+	content: attr(data-letters);
+	position: absolute;
+	color: #fff;
+	left: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 0%;
+	-webkit-transition: width 0.5s;
+	transition: width 0.5s;
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.link-kumya:hover span::before {
+	width: 100%;
+}
+/*--//Kumya--*/
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-size: 3em;
+    padding: 13px 0;
+}
+@media(max-width:767px){
+button.navbar-toggle {
+    background: #745EC5;
+    border-color: #fff;
+}
+.navbar-toggle .icon-bar {
+    background: #fff;
+}
+.top-nav ul li {
+    display: block;
+	margin: .5em 0;
+}
+div#bs-example-navbar-collapse-1 {
+    background: rgba(0, 0, 0, 0.82);
+    margin: 0;
+    padding: 0;
+}
+ul.nav.navbar-right {
+    text-align: center;
+}
+.navbar-right .dropdown-menu {
+    min-width: 100%;
+    position: relative;
+	text-align:center;
+}
+}
+/*.navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color:transparent;
 }
 .navbar-default .navbar-brand {
@@ -198,6 +333,7 @@ ul.nav.navbar-nav {
     line-height: 45px;
 }
 /* Outline In */
+/*
 .hvr-outline-in {
   display: inline-block;
   vertical-align: middle;
@@ -229,7 +365,7 @@ ul.nav.navbar-nav {
 }
 /* //Outline In */
 /* Rectangle In */
-.hvr-rectangle-in {
+/*.hvr-rectangle-in {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -266,9 +402,9 @@ ul.nav.navbar-nav {
 .hvr-rectangle-in:hover:before, .hvr-rectangle-in:focus:before, .hvr-rectangle-in:active:before {
   -webkit-transform: scale(0);
   transform: scale(0);
-}
+}*/
 /* //Rectangle In */
-.navbar-header h1 a {
+/*.navbar-header h1 a {
     font-size: 1.4em;
     color: #FFF;
     letter-spacing: 2px;
@@ -296,6 +432,57 @@ ul.nav.navbar-nav {
     padding:0!important;
     line-height: 45px;
 }
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+*/
 /*-- //Navbar --*/
 /*-- banner-text--*/
 .banner-text h2 {
@@ -329,7 +516,7 @@ ul.nav.navbar-nav {
 .book-form label i {
     font-size: 20px;
     margin-right: 5px;
-    color: #009688;
+    color: #745EC5;
     color: #FFC107;
 }
 .book-form input[type="text"],.book-form input[type="date"],.book-form input[type="text"],.book-form input[type="email"] {
@@ -351,7 +538,7 @@ ul.nav.navbar-nav {
 }
 .book-form form input[type="submit"] {
     text-transform: capitalize;
-    background: #009688;
+    background: #745EC5;
     color: #FFFFFF;
     padding: .7em 2em;
     border: none;
@@ -557,7 +744,7 @@ span.simply-word {
 .bottomgridtext{
     padding-left: 40px;
     padding-right: 100px;
-    background: #009688;
+    background: #745EC5;
     padding-bottom: 81px;
     padding-top: 20px;
 }
@@ -660,7 +847,7 @@ span.simply-word {
 .grid1 i.fa {
     font-size: 40px;
     color: #000;
-    color: #009688;
+    color: #745EC5;
 }
 /* //services */
 
@@ -756,7 +943,7 @@ span.simply-word {
 	font-weight:500;
 }
 .panel-title > a, .panel-title > small, .panel-title > .small, .panel-title > small > a, .panel-title > .small > a {
-    color: #009688;
+    color: #745EC5;
 }
 /*-- //faq --*/
 
@@ -770,7 +957,7 @@ span.simply-word {
 }
 .carousel-caption h3 {
     font-weight: 300;
-    color: #009688;
+    color: #745EC5;
     text-shadow: 0 1px 1px #000;
     margin: 0;
     letter-spacing: 3px;
@@ -936,8 +1123,8 @@ span.simply-word {
     margin-top: -15px;
     display: block;
     text-decoration: none;
-    border: 2px solid #009688;
-    color: #009688;
+    border: 2px solid #745EC5;
+    color: #745EC5;
     background: #ffc107;
     font-size: 18px;
     text-align: center;
@@ -1138,7 +1325,7 @@ section.portfolio-agileinfo .nav-tabs > li.active > a,section.portfolio-agileinf
     color:#fff;
     cursor:pointer;
 	border:none;
-    background-color: #009688;
+    background-color: #745EC5;
 }
 section.portfolio-agileinfo .nav-tabs > li > a {
 	margin:0px;
@@ -1155,12 +1342,12 @@ section.portfolio-agileinfo .nav-tabs {
 }
 section.portfolio-agileinfo .nav-tabs > li {
     margin-bottom: 0;
-    border: 1px solid #009688;
+    border: 1px solid #745EC5;
     margin: 0 5px;
 }
 section.portfolio-agileinfo .nav-tabs > li:nth-child(1) {
 	margin-left:41em;
-    border-left: 1px solid #009688;
+    border-left: 1px solid #745EC5;
 }
 section.portfolio-agileinfo .nav > li > a:hover,section.portfolio-agileinfo .nav > li > a:focus {
     color:#000;
@@ -1185,7 +1372,7 @@ section.portfolio-agileinfo .nav > li > a:hover,section.portfolio-agileinfo .nav
 }
 .customer-grid h4{
 	font-size: 1.5em;
-    color: #009688;
+    color: #745EC5;
 	margin:1em 0 0;
 	text-align: center;
 }
@@ -1312,7 +1499,7 @@ iframe {
     padding: 10px;
     background: none;
     width: 100%;
-    border: 1px solid #009688;
+    border: 1px solid #745EC5;
 }
 .mail-grid1-form textarea {
     margin: 0 0 1.5em;
@@ -1323,7 +1510,7 @@ iframe {
     outline: none;
     border: none;
     font-size: 16px;
-    background: #009688;
+    background: #745EC5;
     padding: 10px;
     width: 50%;
     margin: 0 auto;
@@ -1348,7 +1535,7 @@ iframe {
 h3.tittle-w3 {
     text-align: center;
     margin-bottom: 20px;
-    color: #009688;
+    color: #745EC5;
     font-size: 30px;
     text-transform: capitalize;
 }
@@ -1361,7 +1548,7 @@ h3.tittle-w3 {
     width: 28%;
 }
 .mail-agileits-w3layouts i {
-    color: #009688;
+    color: #745EC5;
     font-size: 28px;
     vertical-align: middle;
     border-right: 3px solid #FFC107;
@@ -1391,7 +1578,7 @@ h3.tittle-w3 {
     letter-spacing: 1px;
 }
 .agileits-w3layouts-copyright p a {
-    color: #009688;
+    color: #745EC5;
     text-decoration: none;
 }
 .agileits-w3layouts-copyright p a:hover{
@@ -1416,7 +1603,7 @@ h3.tittle-w3 {
 	height: 40px;
 	border: none;
 	text-indent: 100%;
-    background: url(../images/arrow.png) no-repeat 4px 4px #009688;
+    background: url(../images/arrow.png) no-repeat 4px 4px #745EC5;
 }
 #toTopHover {
 	width: 40px;
